@@ -1,0 +1,48 @@
+:root{
+  --bg: transparent;
+  --ink: #111;
+  --skin: #f2d1c2;
+  --hair: #111;
+  --hoodie: #0f0f10;
+  --hoodie2: #1a1a1c;
+  --white: #fff;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.stage{
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.mini{
+  width: min(42vw, 240px);
+  height: auto;
+  pointer-events: none;
+}
+
+.shadow{ fill: rgba(0,0,0,0.12); }
+.skin{ fill: var(--skin); }
+.hair{ fill: var(--hair); }
+.eyeWhite{ fill: var(--white); }
+.pupil{ fill: var(--ink); }
+.glint{ fill: rgba(255,255,255,0.9); }
+.line{
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+.hoodie{ fill: var(--hoodie); }
+.hoodieDark{ fill: var(--hoodie2); }
+
+/* keep it crisp in iframes */
+svg { shape-rendering: geometricPrecision; }
