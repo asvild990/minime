@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Me</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="stage">
+    <!-- SVG = easiest to art-direct + animate -->
+    <svg id="miniMe" class="mini" viewBox="0 0 300 300" aria-label="Mini me">
+      <!-- shadow -->
+      <ellipse cx="150" cy="260" rx="70" ry="14" class="shadow"/>
+
+      <!-- head group (we rotate/translate this) -->
+      <g id="head" transform-origin="150px 140px">
+        <!-- neck -->
+        <rect x="135" y="185" width="30" height="30" rx="12" class="skin"/>
+
+        <!-- head -->
+        <path class="skin" d="M150,55
+          C105,55 85,85 85,125
+          C85,175 115,205 150,205
+          C185,205 215,175 215,125
+          C215,85 195,55 150,55 Z"/>
+
+        <!-- hair (placeholder shape) -->
+        <path class="hair" d="M90,125
+          C95,70 130,45 150,45
+          C170,45 210,70 210,125
+          C200,95 180,85 150,85
+          C120,85 100,95 90,125 Z"/>
+
+        <!-- left eye socket -->
+        <g class="eye" transform="translate(110 125)">
+          <circle r="22" class="eyeWhite"/>
+          <circle id="pupilL" r="8" class="pupil"/>
+          <circle r="3" cx="5" cy="-4" class="glint"/>
+        </g>
+
+        <!-- right eye socket -->
+        <g class="eye" transform="translate(190 125)">
+          <circle r="22" class="eyeWhite"/>
+          <circle id="pupilR" r="8" class="pupil"/>
+          <circle r="3" cx="5" cy="-4" class="glint"/>
+        </g>
+
+        <!-- nose -->
+        <path class="line" d="M150 140 C145 155 145 160 150 162 C155 164 160 160 162 158"/>
+
+        <!-- mouth -->
+        <path id="mouth" class="line" d="M130 175 C145 188 155 188 170 175"/>
+      </g>
+
+      <!-- body (simple hoodie placeholder) -->
+      <path class="hoodie" d="M90 260
+        C95 225 110 205 135 200
+        L165 200
+        C190 205 205 225 210 260 Z"/>
+      <path class="hoodieDark" d="M135 200 C140 220 160 220 165 200 Z"/>
+    </svg>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
